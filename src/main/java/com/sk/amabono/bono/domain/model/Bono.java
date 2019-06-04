@@ -27,6 +27,17 @@ public class Bono extends AbstractEntity implements AggregateRoot {
 	@Enumerated(EnumType.STRING)
 	private BonoState state;
 	
+
+	public Bono( String name,String Desc,MemMemberlevelType requiredlevel, Date date, Address address,int requestcount ) {
+		
+		this.name = name;
+		this.Desc = Desc;
+		this.requiredlevel = requiredlevel;
+		
+		this.address = address;
+		this.date = date;
+		this.requestcount = requestcount;
+	}
 	
 }
 
