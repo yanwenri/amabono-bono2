@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/amabono-bono2/bono-test', '.']
+  args: ['build', '-t', 'gcr.io/stoked-elixir-242309/bono-test', '.']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/stoked-elixir-242309/bono-test'] 
