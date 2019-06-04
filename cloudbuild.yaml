@@ -1,5 +1,14 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/stoked-elixir-242309/bono-test', '.']
+  args: ['build', '-t', 'gcr.io/stoked-elixir-242309/bono-test2', '.'] #1 bono-test2
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/stoked-elixir-242309/bono-test'] 
+  args: ['push', 'gcr.io/stoked-elixir-242309/bono-test2'] #2 bono-test2
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: 
+  - set
+  - image
+  - deployment/amabono2 #deploy명
+  - amabono2-container=gcr.io/gcr.io/stoked-elixir-242309/bono-test2:latest #위에 1,2,3 이름 동일하게!!(bono-test2)
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a' # 나의 클러스터 지역 (클러스터 누르고 확인)
+  - 'CLOUDSDK_CONTAINER_CLUSTER=bono-test-cluster' # k8s 클러스터 이름
