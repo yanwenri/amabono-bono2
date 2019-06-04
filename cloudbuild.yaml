@@ -5,7 +5,7 @@ steps:
   args: ['build', '-t', 'gcr.io/amabono-bono2/bono-test', '.']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/My First Project/bono-test']  
+  args: ['push', 'gcr.io/sixth-legend-242106/bono-test']  
 options:
   machineType: 'N1_HIGHCPU_8'
 timeout: 1000s
