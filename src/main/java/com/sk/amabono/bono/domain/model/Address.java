@@ -12,6 +12,10 @@ public class Address implements ValueObject {
 	private Integer zipCode;
 	private String Address;
 	
+	public Address() {
+		
+	}
+	
 	public Address(Integer zipCode, String Address) {
 		this.zipCode = zipCode;
 		this.Address = Address;
