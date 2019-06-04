@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/yanwenri/Amabono-bono', '.']
+  args: ['build', '-t', 'gcr.io/Amabono-bono/bono', '.']
   timeout: 500s
 options:
   machineType: 'N1_HIGHCPU_8'
