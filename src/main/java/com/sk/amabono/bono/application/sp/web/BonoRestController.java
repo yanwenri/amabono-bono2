@@ -21,11 +21,11 @@ public class BonoRestController {
 	public void loginPOST(String id) {
 		System.out.println("Submit ID :: " + id);
 	}
-*/	
+	
 	@RequestMapping(value="/create", method = RequestMethod.POST)
 	public ResponseEntity<Void> PostBono(@RequestBody final Bono bono){
 		
 		return new ResponseEntity<Void>;
 	}
-	
+*/		
 }
