@@ -7,7 +7,7 @@
 		<version>1.5.20.RELEASE</version>
 	</parent>
 	
-  	<groupId>com.sk.amabono2</groupId>
+  	<groupId>com.sk.amabono</groupId>
   	<artifactId>bono</artifactId>
   	<version>0.0.1-SNAPSHOT</version>
   	<packaging>jar</packaging>
