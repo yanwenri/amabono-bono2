@@ -2,18 +2,32 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8"/>
-	<title>Login Form</title>
+	
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"/>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script>
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				dateFormat: "yymmdd"
+			})
+		});
+		
+		
+	</script>	
+	<title>봉사활동 등록</title>
 </head>
+
 <body>
-	<h1>Login Thymeleaf</h1>
+	<h1>봉사활동 등록</h1>
 	<form name="loginForm" method="post">
 		<p>name : <input type="text" name="name" />	
 		활동정보 : <input type="text" name="Desc" />		
 		주소 : <input type="text" name="address" /> 우편번호 : <input type="text" name="zip" />
 		모집인원 : <input type="text" name="requestcount" />
 		필요레벨 ( 1~5)  : <input type="text" name="requiredlevel" />
-		봉사일  : <input type="text" name="day" />
-		<input type="submit" value="Login"/></p>		
+		봉사일  :  <input type="text" id="datepicker" name="day"/>
+		<input type="submit" value="신청"/></p>		
 	</form>
 </body>
 </html>
