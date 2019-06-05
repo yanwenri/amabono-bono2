@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head> 
+<meta charset="UTF-8" /> 
+<title>Hello Thymeleaf</title> 
+</head> 
+<body> 
+<dl> 
+<dt>번호</dt> 
+<dd th:text="${myData.bono_id}"></dd> 
+<dt>제목</dt> 
+<dd th:text="${myData.name}"></dd> 
+<dt>상세내용</dt> 
+<dd th:text="${myData.desc}"></dd> 
+<dt>필요인원</dt> 
+<dd th:text="${myData.requestcount}"></dd> 
+<dt>필요레벨</dt> 
+<dd th:text="${myData.requiredlevel}"></dd> 
+</dl> 
+</body> 
+</html>
