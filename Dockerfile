@@ -23,4 +23,9 @@ COPY --from=builder /app/target/*.jar /app.jar
 ENV PORT 8080
 
 # Run the web service on container startup.
-CMD ["java","-Dserver.port=${PORT}","-jar","/app.jar"]
+#CMD ["java","-Dserver.port=${PORT}","-jar","/app.jar"]
+
+# tomcat add
+ADD apache-tomcat-8.5.23 /usr/local/ 
+EXPOSE 8080 443
+CMD ["catalina.sh", "run"]
