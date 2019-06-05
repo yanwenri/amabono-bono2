@@ -7,7 +7,7 @@ steps:
   args: 
   - 'set'
   - 'image'
-  - 'deployment/bono-test2' #deploy명
+  - 'deployment/bono-test3' #deploy명
   - 'bono-test2-sha256=gcr.io/stoked-elixir-242309/bono-test2:latest' #위에 1,2,3 이름 동일하게!!(bono-test2)
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a' # 나의 클러스터 지역 (클러스터 누르고 확인)
